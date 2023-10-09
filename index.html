@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+    </style>
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
     <meta charset="UTF-8">
@@ -8,8 +11,25 @@
     <title>Wordle</title>
 </head>
 <body>
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+        <div class="bar7"></div>
+        <div class="bar8"></div>
+        <div class="bar9"></div>
+        <div class="bar10"></div>
+        <div class="bar11"></div>
+        <div class="bar12"></div>
+    </div>
+    <div class="loader-overlay">
+    </div>
     <div id="title">
         <h1>Wordle</h1>
+        <button id="gear"><img src="images/icons8-gear-50.png"></button>
         <hr>
     </div>
     <div id="board">
@@ -22,7 +42,21 @@
         <h1>Game Over!</h1>
         <hr>
         <p id="message"></p>
-        <button>Restart</button>
+        <button id="restartBtn">Play Again</button>
+    </div>
+    <div id="settings">
+        <h1>settings</h1>
+        <button id="closeBtn"><img src="images/icons8-close-50.png"></button>
+        <hr>
+        <p>Preferred Language:</p>
+        <select>
+            <option>English</option>
+            <option>Arabic</option>
+        </select>
+            <hr>
+            <div class="sbtn">
+                <button id="saveBtn">Save</button>
+            </div>
     </div>
 </body>
 </html>
