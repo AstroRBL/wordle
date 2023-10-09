@@ -552,6 +552,15 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.reload();
     }
   });
+  document.addEventListener("click", function (event) {
+    document.getElementById("error-button");
+    if (event.target.id === "error-button") {
+      let inv = document.getElementById("error");
+      inv.style.display = "none";
+      let over = document.getElementById("overlay");
+      over.style.display = "none";
+    }
+  });
 
   function getRandomWord() {
     let randomIndex = Math.floor(Math.random() * wordsList.length);
@@ -581,7 +590,13 @@ document.addEventListener("DOMContentLoaded", function () {
         row += 1;
         col = 0;
       } else if (e.code == "Enter" && col != 5) {
-        window.alert("Please type in a five letter word!");
+        let inv = document.getElementById("error");
+        inv.style.display = "block";
+        let over = document.getElementById("overlay");
+        over.style.display = "block";
+        let errorMsg = document.getElementById("error-message");
+        let errorBtn = document.getElementById("error-button");
+        errorMsg.innerText = "Please enter a Five-letter word.";
       }
     }
 
