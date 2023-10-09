@@ -588,6 +588,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (row == height) {
       isGameOver = true;
       gameOver();
+      let msg = document.getElementById("message");
+      msg.innerText = "You got it right! The word was " + word;
+      
     }
   });
   let gearBtn = document.getElementById("gear");
