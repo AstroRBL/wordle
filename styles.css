@@ -381,3 +381,60 @@ hr {
   bottom: 12px;
   width: 200px;
 }
+.startMessage {
+  display: none;
+  position: relative;
+  bottom: 400px;
+  margin: 0 auto;
+  width: 550px;
+  height: 430px;
+  background-color: #36393e;
+  padding: 5px 0px;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 2em;
+}
+.startMessage h1 {
+  position: relative;
+  top: 5px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.startMessage p {
+  position: relative;
+  top: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 20px;
+}
+.startMessage button {
+  position: relative;
+  left: 200px;
+  top: 50px;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #dddddd;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.startMessage button:hover {
+  background-color: #7289da;
+  box-shadow: 0px 5px 20px #7289da;
+  color: #fff;
+  transform: translateY(-7px);
+}
+.startMessage button:active {
+  transform: translateY(-1px);
+}

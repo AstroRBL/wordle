@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const loaderOverlay = document.querySelector(".loader-overlay");
   loader.style.display = "none";
   loaderOverlay.style.display = "none";
+  function startPop() {
+    let startWin = document.querySelector(".startMessage");
+    let startBtn = document.getElementById("startBtn");
+    startWin.style.display = "block";
+    startBtn.addEventListener("click", function () {
+      startWin.style.display = "none";
+    });
+  }
 
   let msg = document.getElementById("message");
   var height = 6;
@@ -502,6 +510,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var word = "";
   var isGameOver = false;
   window.onload = function () {
+    startPop();
     initialize();
     getRandomWord();
   };
