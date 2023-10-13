@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       startWin.style.display = "none";
     });
   }
-
   let msg = document.getElementById("message");
   var height = 6;
   var width = 5;
@@ -507,6 +506,209 @@ document.addEventListener("DOMContentLoaded", function () {
     "Vital",
     "Voice",
   ];
+  const wordsListEs = [
+    "llama",
+    "manos",
+    "grano",
+    "fondo",
+    "lucha",
+    "grues",
+    "puert",
+    "pazos",
+    "fuerz",
+    "pista",
+    "dolor",
+    "norte",
+    "aguas",
+    "gente",
+    "largo",
+    "peque",
+    "horno",
+    "campo",
+    "torre",
+    "mesas",
+    "crudo",
+    "guion",
+    "rayas",
+    "torti",
+    "fines",
+    "senso",
+    "techo",
+    "oliva",
+    "notas",
+    "tejido",
+    "forro",
+    "curvo",
+    "algun",
+    "conse",
+    "banda",
+    "pista",
+    "negro",
+    "coche",
+    "curva",
+    "fiest",
+    "piel",
+    "dulce",
+    "ancho",
+    "cable",
+    "tejido",
+    "corpo",
+    "famos",
+    "bocas",
+    "altas",
+    "fuera",
+    "maizo",
+    "vista",
+    "silla",
+    "apoyo",
+    "nubes",
+    "cable",
+    "manos",
+    "barro",
+    "mucho",
+    "lleno",
+    "pared",
+    "marco",
+    "fuera",
+    "barro",
+    "curva",
+    "ducho",
+    "somos",
+    "nombres",
+    "vente",
+    "novio",
+    "perro",
+    "arena",
+    "fondo",
+    "seman",
+    "cabel",
+    "medio",
+    "heroe",
+    "silvo",
+    "curvo",
+    "vista",
+    "mesas",
+    "calas",
+    "piern",
+    "viejo",
+    "cator",
+    "sange",
+    "carga",
+    "recto",
+    "vigor",
+    "doble",
+    "camin",
+  ];
+  const wordsListFr = [
+    "abêti",
+    "aboli",
+    "actai",
+    "Adimi",
+    "aérai",
+    "agami",
+    "agoni",
+    "ahuri",
+    "aidai",
+    "aigri",
+    "ailai",
+    "aimai",
+    "ainsi",
+    "aïoli",
+    "airai",
+    "aisai",
+    "Alesi",
+    "alibi",
+    "allai",
+    "aluni",
+    "amari",
+    "amati",
+    "ambai",
+    "amphi",
+    "ampli",
+    "annui",
+    "anobi",
+    "anomi",
+    "apéri",
+    "appui",
+    "arabi",
+    "arroi",
+    "asile",
+    "assis",
+    "assis",
+    "astre",
+    "atomi",
+    "attir",
+    "aubin",
+    "audit",
+    "augur",
+    "autel",
+    "auxin",
+    "avant",
+    "avoir",
+    "azyme",
+    "babas",
+    "babel",
+    "babys",
+    "bacch",
+    "bachi",
+    "bacon",
+    "badai",
+    "badat",
+    "badée",
+    "badés",
+    "badge",
+    "badin",
+    "bafra",
+    "bagad",
+    "bagel",
+    "bagne",
+    "bagot",
+    "bagua",
+    "bagui",
+    "bahut",
+    "baies",
+    "baign",
+    "baika",
+    "bails",
+    "bains",
+    "baiss",
+    "balai",
+    "balan",
+    "balao",
+    "balas",
+    "balay",
+    "balbo",
+    "balda",
+    "bales",
+    "balez",
+    "balis",
+    "baliv",
+    "balla",
+    "balle",
+    "ballu",
+    "balné",
+    "banal",
+    "banat",
+    "banca",
+    "banco",
+    "banda",
+    "bande",
+    "banjo",
+    "banks",
+    "banon",
+    "baoul",
+    "barat",
+    "barbe",
+    "barbu",
+    "barda",
+    "barde",
+    "barge",
+    "baril",
+    "barjo",
+    "baron",
+    "barre",
+  ];
+
   var word = "";
   var isGameOver = false;
   window.onload = function () {
@@ -628,5 +830,31 @@ document.addEventListener("DOMContentLoaded", function () {
     setWin.style.display = "none";
     let over = document.getElementById("overlay");
     over.style.display = "none";
+  });
+  let save = document.getElementById("saveBtn");
+  let sel = document.getElementById("select");
+  save.addEventListener("click", function () {
+    if (sel.value === "es") {
+      let randomIndex = Math.floor(Math.random() * wordsListEs.length);
+      word = wordsListEs[randomIndex].toUpperCase();
+      console.log(word);
+      setWin.style.display = "none";
+      let over = document.getElementById("overlay");
+      over.style.display = "none";
+    } else if (sel.value === "en") {
+      let randomIndex = Math.floor(Math.random() * wordsList.length);
+      word = wordsList[randomIndex].toUpperCase();
+      console.log(word);
+      setWin.style.display = "none";
+      let over = document.getElementById("overlay");
+      over.style.display = "none";
+    } else if (sel.value === "fr") {
+      let randomIndex = Math.floor(Math.random() * wordsListFr.length);
+      word = wordsListFr[randomIndex].toUpperCase();
+      console.log(word);
+      setWin.style.display = "none";
+      let over = document.getElementById("overlay");
+      over.style.display = "none";
+    }
   });
 });
